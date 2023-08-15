@@ -1,19 +1,20 @@
 import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-map',
+  templateUrl: './map.component.html',
+  styleUrls: ['./map.component.css']
 })
-export class AppComponent implements AfterViewInit {
-  title = 'WorldMap';
+export class MapComponent implements AfterViewInit {
 
-  ngAfterViewInit() {
-    let selectedArea: string | null = null; 
+  // constructor() { }
+
+ ngAfterViewInit() {
+    let selectedArea: string | null = null;
     let areas = document.querySelectorAll<SVGElement>('path');
     areas.forEach((area) => {
       area.addEventListener('mouseover', function () {
-        area.style.fill = 'red';
+        area.style.fill = 'green';
       });
       area.addEventListener('mouseout', function () {
         area.style.fill = '';
