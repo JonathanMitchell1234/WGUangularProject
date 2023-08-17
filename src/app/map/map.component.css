@@ -1,13 +1,17 @@
 svg {
     background-color: rgb(54, 159, 201);
+    width: auto;
+    height: 70vh;
 }
 
 .flex-container {
   display: flex;
+  width: 100vw;
+  height: 90vh;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
   /* align-content: space-around; */
 }
 
@@ -16,7 +20,7 @@ svg {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-
+  margin-right: auto;
 }
 
 .flex-items:nth-child(2) {
@@ -25,4 +29,5 @@ svg {
   flex-shrink: 1;
   flex-basis: auto;
   float: right;
+  justify-content: space-between;
 }
